@@ -1,0 +1,59 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.pyc
+
+# Virtual environments
+.env
+.venv/
+venv/
+venv-dl/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Project specific
+models/*.pkl
+models/*.h5
+models/best_dl_model.h5
+models/deep_learning_model.h5
+output/
+logs/*.log
+data/combined_weather_data.csv
+data/processed_weather_data.csv
+weather_data_combined_enhanced.csv
+
+# Node modules
+node_modules/
+frontend/node_modules/
+frontend/dist/
+
+# Build outputs
+*.egg-info/
+dist/
+build/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temp
+*.log
+*.tmp
+*.bak
+
+# Large CSV files
+*.csv
+ml/*.csv
+
+# Keep metadata and important configs
+!models/metadata.json
+!models/dl_metadata.json
+!ml/city_attributes.csv

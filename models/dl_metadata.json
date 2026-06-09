@@ -1,0 +1,88 @@
+{
+  "model_type": "Advanced Deep Neural Network",
+  "framework": "TensorFlow/Keras",
+  "anti_overfitting_techniques": [
+    "Dropout (10-40%)",
+    "L2 Regularization",
+    "Batch Normalization",
+    "Early Stopping",
+    "Learning Rate Scheduling",
+    "Data Augmentation",
+    "Huber Loss",
+    "Temporal Split"
+  ],
+  "architecture": {
+    "layers": [
+      512,
+      256,
+      128,
+      64,
+      32
+    ],
+    "activation": "relu",
+    "regularization": "L2 (0.0001)",
+    "dropout_rates": [
+      0.4,
+      0.3,
+      0.3,
+      0.2,
+      0.1
+    ]
+  },
+  "training": {
+    "epochs_trained": 24,
+    "batch_size": 1024,
+    "optimizer": "Adam",
+    "loss_function": "Huber",
+    "data_augmentation": true
+  },
+  "performance": {
+    "train": {
+      "R2": 0.8902295857115479,
+      "MAE": 2.5626083045702446,
+      "RMSE": 3.4499350144888603
+    },
+    "validation": {
+      "R2": 0.8788551748417489,
+      "MAE": 2.7684111987403024,
+      "RMSE": 3.6527767849399915
+    },
+    "test": {
+      "R2": 0.8465038785443604,
+      "MAE": 2.6124405956427945,
+      "RMSE": 3.452038112157318
+    },
+    "accuracy_percent": 84.65038785443603,
+    "r2_train_val_gap": 0.011374410869798957
+  },
+  "dataset": {
+    "total_samples": 1592320,
+    "train_samples": 1114624,
+    "val_samples": 238848,
+    "test_samples": 238848,
+    "num_features": 21,
+    "features": [
+      "humidity",
+      "pressure",
+      "wind_speed",
+      "wind_direction",
+      "latitude",
+      "longitude",
+      "hour",
+      "month",
+      "day_of_year",
+      "day_of_week",
+      "month_sin",
+      "month_cos",
+      "hour_sin",
+      "hour_cos",
+      "day_sin",
+      "day_cos",
+      "day_of_week_sin",
+      "day_of_week_cos",
+      "humidity_pressure",
+      "wind_speed_squared",
+      "dewpoint_approx"
+    ]
+  }
+}
